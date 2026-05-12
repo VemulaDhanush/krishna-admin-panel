@@ -1,0 +1,243 @@
+/* ================= SIMPLE BUT STYLISH LOGIN ================= */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff9f0;
+    /* బ్యాక్‌గ్రౌండ్ లో ఒక చిన్న మూమెంట్ కోసం */
+    background-image: radial-gradient(#f39c12 0.5px, transparent 0.5px);
+    background-size: 30px 30px; /* చిన్న డాట్స్ లాంటి ఎఫెక్ట్ */
+}
+
+.login-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    border: 1px solid #eee;
+    /* బాక్స్ మెల్లగా పైకి కిందకి మూవ్ అయ్యే ఎఫెక్ట్ */
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.login-box h2 {
+    color: #333;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+}
+
+/* టైటిల్ కింద చిన్న లైన్ ఎఫెక్ట్ */
+.login-box h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #f39c12;
+    border-radius: 10px;
+}
+
+/* ఇన్‌పుట్ ఫీల్డ్స్ కి Hover/Focus ఎఫెక్ట్స్ */
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-box input:focus {
+    border-color: #f39c12;
+    /* క్లిక్ చేసినప్పుడు కొంచెం పెద్దదవుతుంది */
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.1);
+}
+
+/* సబ్మిట్ బటన్ ఎఫెక్ట్ */
+.login-box button {
+    width: 100%;
+    background: #f39c12;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.login-box button:hover {
+    background: #222;
+    letter-spacing: 1px; /* టెక్స్ట్ కొంచెం వెడల్పు అవుతుంది */
+}
+
+/* బటన్ మీద చిన్న షైన్ ఎఫెక్ట్ */
+.login-box button::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.login-box button:hover::before {
+    left: 100%;
+}
+
+/* ================= VIBRANT DASHBOARD STYLING ================= */
+
+/* ================= VIBRANT DASHBOARD CSS ================= */
+.dashboard-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1a1a1a, #333);
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border-left: 8px solid #f39c12;
+}
+
+.dashboard-header h2 {
+    color: #f39c12;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #ff6b81;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.table-wrapper {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+.enquiry-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.enquiry-table th {
+    background: #f39c12;
+    color: #fff;
+    padding: 18px;
+    text-align: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.enquiry-table td {
+    padding: 18px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #444;
+}
+
+.enquiry-table tbody tr {
+    transition: 0.2s;
+}
+
+.enquiry-table tbody tr:hover {
+    background-color: #fffaf0;
+    transform: scale(1.002);
+}
+
+/* Service Tags Style */
+.service-tag {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.tag-interior { background: #e3f2fd; color: #1976d2; }
+.tag-exterior { background: #e8f5e9; color: #2e7d32; }
+.tag-waterproof { background: #ffebee; color: #c62828; }
+.tag-whole { background: #f3e5f5; color: #7b1fa2; }
+
+.msg-cell {
+    max-width: 250px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-weight: 500;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.9);
+}
+
+.modal-content{
+  display:block;
+  margin:auto;
+  margin-top:4%;
+  max-width:80%;
+  max-height:85%;
+}
+
+.close{
+  position:absolute;
+  top:20px;
+  right:35px;
+  color:white;
+  font-size:40px;
+  cursor:pointer;
+}
