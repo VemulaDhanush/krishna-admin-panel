@@ -5,7 +5,7 @@ function Dashboard({ onLogout }) {
   const [enquiries, setEnquiries] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/enquiry")
+   fetch("https://krishna-backend-41jq.onrender.com/api/enquiry")
       .then((res) => res.json())
       .then((data) => setEnquiries(data))
       .catch((err) => console.error("Fetch error:", err));
